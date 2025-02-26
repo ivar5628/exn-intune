@@ -7,6 +7,3 @@ if ($EnrollmentStatus -eq $null -or $EnrollmentStatus.Enrolled -ne 1) {
 } else {
     Write-Host "Device is already enrolled."
 }
-
-# Force Intune Sync (optioneel)
-Start-Process -FilePath "C:\Windows\System32\MDMEnrollment.exe" -ArgumentList "/AsyncEnroll"
